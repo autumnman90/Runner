@@ -9,7 +9,18 @@
     <UserControl.DataContext>
         <local:GameViewModel/>
     </UserControl.DataContext>
-    <Grid>
-            
-    </Grid>
+    <Canvas x:Name="gameCanvas" Focusable="True" KeyDown="{Binding Steering_KeyDown}" KeyUp="{Binding Steering_KeyUp}" Background="LightBlue">
+
+        <Rectangle x:Name="background" Height="720" Width="1262" Fill="Orange"/>
+        <Rectangle x:Name="background2" Height="720" Width="1262" Fill="LightGreen" Canvas.Left="1262"/>
+
+        <Rectangle x:Name="ground" Height="32" Width="1280" Fill="Black" Canvas.Top="687" Canvas.Left="0"/>
+
+        <Rectangle x:Name="player" Height="99" Width="67" Fill="Brown" Canvas.Top="351" Canvas.Left="110"/>
+
+        <Rectangle x:Name="obstacle" Height="178" Width="50" Fill="Red" Canvas.Top="620" Canvas.Left="721"/>
+
+        <Label x:Name="scoreText" FontSize="22" FontWeight="Bold" Content="Score: 0"/>
+
+    </Canvas>
 </UserControl>

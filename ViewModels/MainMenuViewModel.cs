@@ -6,20 +6,29 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using Runner.Views;
 using Runner.Models;
+using System.Windows;
 
 namespace Runner.ViewModels
 {
-    class MainMenuViewModel : MainWindow
+    class MainMenuViewModel 
     {
         public DelegateCommandModel StartGame { get; set; }
+        public DelegateCommandModel EndGame { get; set; }
         
 
 
         public MainMenuViewModel()
         {
+            
             this.StartGame = new DelegateCommandModel(
-                (o) => { mainFrame.NavigationService.Navigate(new GameViewModel()); }
+                (o) => { MainWindow.frame.NavigationService.Navigate(new GameViewModel()); }
                 );
+
+            this.EndGame = new DelegateCommandModel(
+                (o) => { Application.Current.Shutdown(); });
+            
+
+
         }
 
     }

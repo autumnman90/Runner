@@ -26,14 +26,14 @@
             Runner
         </TextBlock>
 
-        <Button x:Name="btnNewGame" Grid.Column="1" Grid.Row="1" Margin="30" Focusable="True">
+        <Button x:Name="btnNewGame" Command="{Binding StartGame}" Content="Start" FontSize="60" Grid.Column="1" Grid.Row="1" Margin="30" Focusable="True">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="25"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="btn_Exit" Grid.Column="1" Grid.Row="2" Margin="30" Focusable="True">
+        <Button x:Name="btn_Exit" Command="{Binding EndGame}" CommandParameter="Exit" Content="Exit" FontSize="60" Grid.Column="1" Grid.Row="2" Margin="30" Focusable="True">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="25"/>

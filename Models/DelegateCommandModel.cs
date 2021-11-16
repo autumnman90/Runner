@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Runner.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +8,12 @@ using System.Windows.Input;
 
 namespace Runner.Models
 {
-    class DelegateCommandModel : ICommand
+    public class DelegateCommandModel : ICommand
     {
         readonly Action<object> execute;
         readonly Predicate<object> canExecute;
+
+        
 
         public DelegateCommandModel(Predicate<object> canExecute, Action<object> execute) =>
             (this.canExecute, this.execute) = (canExecute, execute);

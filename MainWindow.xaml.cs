@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Runner.Views;
+using Runner.ViewModels;
 
 namespace Runner
 {
@@ -22,13 +23,17 @@ namespace Runner
     public partial class MainWindow : Window
     {
 
-        
+        public static Frame frame;
         
 
         public MainWindow()
         {
             InitializeComponent();
-            mainFrame.NavigationService.Navigate(new MainMenuView());
+            
+            frame = mainFrame;
+            frame.NavigationService.Navigate(new MainMenuViewModel());
+            
+
         }
     }
 }
