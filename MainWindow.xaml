@@ -5,10 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Runner"
         mc:Ignorable="d"
-        Title="Runner by MHE" Height="750" Width="1280">
+        Title="Runner Runner" Height="750" Width="1280"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResize">
 
     <Grid>
-        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                Background="#404040"
+                MouseDown="Border_MouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+                <Label Content="Runner Runner V 0.2 BETA"
+                       Foreground="Gray"
+                       FontWeight="SemiBold"/>
+
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                    <Button Height="25" Width="25"
+                            Content="🗕"
+                            Margin="0"
+                            FontWeight="Bold"
+                            Style="{StaticResource MainWindowButtonStyle}"/>
+                    <Button Height="25" Width="25"
+                            Content="🗖"
+                            Margin="0"
+                            FontWeight="Bold"
+                            Style="{StaticResource MainWindowButtonStyle}"/>
+                    <Button Height="25" Width="25"
+                            Content="X"
+                            Margin="0"
+                            FontWeight="Bold"
+                            Style="{StaticResource CloseWindowButtonStyle}"/>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <Frame Grid.Row="1" x:Name="mainFrame" NavigationUIVisibility="Hidden"/>
+
     </Grid>
     
 </Window>

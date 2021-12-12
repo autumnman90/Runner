@@ -2,15 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Runner"
-             xmlns:views="clr-namespace:Runner.Views"
-             xmlns:viewmodels="clr-namespace:Runner.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type viewmodels:MainMenuViewModel}">
-            <views:MainMenuView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodels:GameViewModel}">
-            <views:GameView/>
-        </DataTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./Themes/StackButtonStyle.xaml"/>
+                <ResourceDictionary Source="./Themes/StackCloseButtonStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

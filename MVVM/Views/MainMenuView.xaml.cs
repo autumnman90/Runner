@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Runner.Views
+namespace Runner.MVVM.Views
 {
     /// <summary>
-    /// Interaction logic for GameView.xaml
+    /// Interaction logic for MainMenuView.xaml
     /// </summary>
-    public partial class GameView : UserControl
+    public partial class MainMenuView : Page
     {
-        public GameView()
+        public MainMenuView()
         {
             InitializeComponent();
         }

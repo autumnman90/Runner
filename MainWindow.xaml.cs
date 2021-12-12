@@ -12,8 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Runner.Views;
-using Runner.ViewModels;
 
 namespace Runner
 {
@@ -23,16 +21,20 @@ namespace Runner
     public partial class MainWindow : Window
     {
 
-        public static Frame frame;
+      
         
 
         public MainWindow()
         {
             InitializeComponent();
             
-            frame = mainFrame;
-            frame.NavigationService.Navigate(new MainMenuViewModel());
             
+            
+
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
 
         }
     }
